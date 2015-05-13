@@ -18,6 +18,14 @@ Tshirt.create({
 	image_url: "http://s7d9.scene7.com/is/image/AmericanApparel/2456w_white?defaultImage=/notavail&amp;$ProductImage$"
 })
 
-# Sale.create({
-# 	user_email: "molly.setzer@gmail.com"
-# 	})	
+Sale.create({
+	user_email: "molly.setzer@gmail.com",
+	tshirt_id: 2,
+	quantity_purchased: 3
+	})	
+
+Sale.create({
+	user_email: "not.molly.setzer@gmail.com",
+	tshirt_id: 1,
+	quantity_purchased: 1
+	})	
