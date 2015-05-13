@@ -1,0 +1,24 @@
+<html>
+	<head>
+		<title>Tshirt.ly - ADMIN power</title>
+		<link rel="stylesheet" type="text/css" href="styles.css">
+	</head>
+	<body>
+		<header>
+			<h1> Tshirt.ly </h1>
+				<p><h2>Company Tagline + info</h2></p>
+		</header>
+		<div class="content">
+		    <ul class = "sales">
+
+				<% sales.each do |sale| %>
+					<li>
+						<%= sale.email %> purchased <%= sale.quantity_purchased %><a href = "/tshirts/<%= sale.tshirt_id %>"> <%= sale.tshirt %></a> T- shirts on <%= sales.created_at %>
+						</a>
+					</li>
+				<% end %>
+		    </ul>
+	    </div>
+
+	</body>
+</html>
