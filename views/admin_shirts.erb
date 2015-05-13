@@ -14,14 +14,24 @@
 		</header>
 		<div class="content">
 		    <ul class = "sales">
-
 				<% sales.each do |sale| %>
 					<li>
-						Customer: <%= sale.user_email %> purchased <%= sale.quantity_purchased %><a href = "/tshirts/<%= sale.tshirt_id %>"> <%= sale.tshirt_id %></a> T- shirts on <%= sale.created_at %>
+						Customer: <%= sale.user_email %> purchased <%= sale.quantity_purchased %><a href = "/tshirts/<%= sale.tshirt_id %>"> <%= sale.tshirt.style %><%= sale.tshirt.color %></a> T- shirts on <%= sale.created_at %>
 						</a>
 					</li>
 				<% end %>
 		    </ul>
+		    EDIT T-shirt information here: 
+		    <ul class = "tshirts">
+				<% tshirts.each do |tshirt| %>
+					<li>
+						<a href = "/tshirts/<%= tshirt.id %>/edit"> 
+							<%= tshirt.style %> </a> inventory: <%= tshirt.quantity_available %> remaining.
+						
+					</li>
+				<% end %>
+		    </ul>
+
 	    </div>
 
 	</body>
