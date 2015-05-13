@@ -29,7 +29,7 @@ end
 post "/tshirts/:id/newSale" do
 	email = params[:email]
 	tshirt_id = params[:id]
-	quantity = params[:quantity].to_i
+	quantity = params[:quantity].to_f
 	# now update tshirt quantity 
 	this_shirt = Tshirt.find(tshirt_id)
 	new_quantity = this_shirt.quantity_available - quantity
@@ -76,7 +76,16 @@ put "/tshirts/:id" do
 	redirect "/tshirts/#{params[:id]}"
 end
 
+delete "/tshirts/:id/delete" do 
+	this_shirt = Tshirt.find(params[:id])
+	this_shirt.destroy()
+	redirect "/admin"
+end
 
+get "/admin" do 
+	all_sale = Sale.all
+	erb :admin_shirts, locals: {sales: all_sale}
+end
 
 
 
