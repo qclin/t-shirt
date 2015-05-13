@@ -23,7 +23,12 @@
           <label>Change Image</label>
           <input type = "text" name = "new_image" value = "<%= tshirt.image_url %>"><br />
 
-          <button class = "update-button">Update</button>
+          <button class = "update-button">Update</button></br>
+
+          <form class = "list" method = "post" action = "/tshirts/<%= tshirt.id %>" >
+      <input type = "hidden" name = "_method" value = "delete">
+          <button class = "delete-button">Delete</button>
+          </form>
         </div>
     </form>
     </div>
