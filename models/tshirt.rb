@@ -1,4 +1,4 @@
 require_relative '../lib/connection'
 
-class Sale < ActiveRecord::Base
+class Tshirt < ActiveRecord::Base
 end
