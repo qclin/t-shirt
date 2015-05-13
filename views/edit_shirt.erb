@@ -1,0 +1,31 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <link rel = "stylesheet" type = "text/css" href = "/css/styles.css">
+  </head>
+  <body>
+    <div>
+    <header>
+      <h1>Update a T-Shirt</h1>
+    </header>
+    <div class="lines"></div>
+    <form class = "list" method = "post" action = "/tshirts/<%= tshirt.id %>" >
+      <input type = "hidden" name = "_method" value = "put">
+        <div class = "fields">
+          <label>Change T-Shirt Style</label>
+          <input type = "text" name = "new_style" value = "<%= tshirt.style %>"><br />
+          <label>Change Colours</label>
+          <input type = "text" name = "new_color" value = "<%= tshirt.color %>"><br />
+          <label>Available In Stock</label>
+          <input type = "text" name = "new_quantity" value = "<%= tshirt.quantity_available %>"><br />
+          <label>Inflation Adjustment</label>
+          <input type = "text" name = "new_price" value = "<%= tshirt.price %>"><br />
+          <label>Change Image</label>
+          <input type = "text" name = "new_image" value = "<%= tshirt.image_url %>"><br />
+
+          <button class = "update-button">Update</button>
+        </div>
+    </form>
+    </div>
+  </body>
+</html>
