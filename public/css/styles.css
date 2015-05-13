@@ -1,0 +1,17 @@
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,600italic,700italic,800italic,400,300,600' rel='stylesheet' type='text/css'>
+h1{
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 800;
+	font-style: italic;
+	color: white;
+
+}
+header{
+	background-color: #404040;
+	height: 100px;
+	top: 0;
+
+}
+ul{
+	display: inline;
+}
