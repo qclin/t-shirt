@@ -93,6 +93,10 @@ get "/admin" do
 	erb :admin_shirts, locals: {sales: all_sale, tshirts: all_shirts}
 end
 
+get "/about" do 
+	erb :about
+end 
+
 
 
 
