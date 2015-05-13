@@ -5,7 +5,7 @@ h1{
 	font-style: italic;
 	color: white;
 	font-size: 30px;
-	padding-left: 100px;
+	padding-left: 50px;
 
 }
 h2{
@@ -15,7 +15,32 @@ h2{
 	padding-left: 150px;
 	padding-bottom: 20px;
 }
+nav.navHeader ul li{
+	padding: 0px 10px 20px 10px;
+	display: inline;
+	text-decoration: none;
+	z-index: 999;
+	font-color: white;
+	float: right;
+
+}
+nav.navHeader ul li a{
+	color: white;
+	padding-bottom: 20px;
+	text-decoration: none;
+	padding-right: 20px;
+	padding-top: 20px;
+}
 header{
+	background-color: #404040;
+	height: 100px;
+	top: 0;
+	left: 0;
+	position: fixed;
+	width: 100%;
+
+}
+/*div.title{
 	background-color: #404040;
 	height: 150px;
 	top: 0;
@@ -24,11 +49,14 @@ header{
 	padding: 0px 0px 0px 0px;
 	width: 100%;
 
-}
-ul{
+}*/
+/*ul{
 	display: inline;
 	text-decoration: none;
+}*/
+.content{
+	padding-top: 200px;
 }
 body{
-	padding-top: 200px;
+	margin: 0px 0px 0px 0px;
 }
