@@ -76,3 +76,8 @@ img.resize{
     width:540px; /* you can use % */
     height: auto;
 }
+
+footer{
+	top:95%;
+	width: 100%
+}

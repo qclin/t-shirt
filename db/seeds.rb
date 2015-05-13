@@ -51,12 +51,12 @@ Tshirt.create({
 	})
 
 Tshirt.create({
-	style: "Fallen Youth",
+	style: "Seeding Alot",
 	color: "grey",
 	quantity_available: 17,
 	price: 11.99,
 	description: "This classic style is composed of 50% modal/45% cotton/5% lycra. Professionally shrink tested just for you. Limited quantity available. Each of our garments are created in small dye lots, so youth experiences may be different for everybody.",
-	image_url: "http://images.asos-media.com/inv/media/7/4/3/5/5305347/image3xxl.jpg"
+	image_url: "http://images.cdn.bigcartel.com/bigcartel/product_images/140561236/max_h-1000+max_w-1000/DSCF5109.JPG"
 	})
 
 
@@ -86,6 +86,15 @@ Tshirt.create({
 	price: 24.99,
 	description: "This classic style is composed of 50% modal/45% cotton/5% lycra. Stone-washed and shrink tested just for you. Limited quantity available. Each of our garments are created in small dye lots, so minor differences may occur.",
 	image_url: "http://i.americanapparel.net/storefront/photos/morephotos/tr401tlw/tr401tlw_01t.jpg"
+	})
+
+Tshirt.create({
+	style: "kardashian crying",
+	color: "kim's face",
+	quantity_available: 500,
+	price: 1.99,
+	description: "This this tshirt shows all that is right about america, it can be yours for a very LOW price",
+	image_url: "http://www.ilovefashionnews.nl/wordpress/wp-content/uploads/2013/06/Kim-K-crying-shirt-bij-1991inccom.jpg"
 	})
 
 

@@ -16,13 +16,13 @@
 		<ul style="list-style-type: none;">
 			<h3 style="padding-bottom:100px;">Congratulations!</h3>
 
-			<li>You have sucessfully purchased:
+			<li>You have successfully purchased:
 			</li>
 			<br>
 			<li style="padding-left:80px;">  <%= sale.quantity_purchased %>  <%= tshirt.style %> at the price of $<%= sale.quantity_purchased * tshirt.price %> 
 			</li>	
 		</ul>	
 	</div>
-	<%= erb :page_footer %>
+	<footer><%= erb :page_footer %></footer>
 </body>
 </html>
