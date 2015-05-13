@@ -6,4 +6,8 @@ class Sale < ActiveRecord::Base
 		Tshirt.find_by({id: self.tshirt_id})
 	end 
 
+	def log
+		return "TESTTESTTEST"
+	end
+
 end
