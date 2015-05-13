@@ -40,6 +40,21 @@ Some things to keep in mind while planning:
 Also Pair Programming is not required, but strongly encouraged.  
 Make sure you switch who is typing frequently and that you both understand the code that you write.
 
+
 ### One step at a time...
 
 * Build one feature at a time and don't move on to the next one until you are finished with the last.
+* 
+
+### ROUTES
+- '/'
+- '/tshirts'
+- '/tshirts/:id'
+- '/tshirts/:id/newSale'
+- '/tshirts/confirmation'
+- '/admin'
+- '/admin/tshirts'
+- '/admin/tshirts/:id'
+
+
+
