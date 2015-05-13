@@ -1,6 +1,7 @@
 require 'sinatra'
 require 'pry'
 require_relative 'models/tshirt'
+require_relative 'models/sale'
 
 #Landing Page
 get "/" do
