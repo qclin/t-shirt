@@ -20,13 +20,13 @@ get "/tshirts/:id" do
 end
 
 #show new sales form 
-get "/tshirts/:id/newSale"
+get "/tshirts/:id/newSale" do
 	one_shirt = Tshirt.find(params[:id])
 	erb :new_sale, locals: {tshirt: one_shirt}
 end 
 
 #posting to sales table 
-post "/tshirts/:id/newSale"
+post "/tshirts/:id/newSale" do
 	email = params[:email]
 	tshirt_id = params[:id]
 	quantity = params[:quantity].to_i
@@ -34,7 +34,7 @@ post "/tshirts/:id/newSale"
 	this_shirt = Tshirt.find(tshirt_id)
 	new_quantity = this_shirt.quantity_available - quantity
 	
-	if new_quantity =< 0 
+	if new_quantity <=  0 
 		response = "Sorry we don't have that many t-shirt for you bugger off"
 	else 
 		Sale.create({user_email: email, tshirt_id: tshirt_id, quantity_purchased: quantity})
@@ -42,7 +42,4 @@ post "/tshirts/:id/newSale"
 		redirect('/tshirts/confirmation')
 	end 
 end
-
-
-
 
