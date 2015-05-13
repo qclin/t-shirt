@@ -16,7 +16,7 @@
 		    <ul class = "sales">
 				<% sales.each do |sale| %>
 					<li>
-						Customer: <%= sale.user_email %> purchased <%= sale.quantity_purchased %><a href = "/tshirts/<%= sale.tshirt_id %>"> <%= sale.tshirt.style %><%= sale.tshirt.color %></a> T- shirts on <%= sale.created_at %>
+						Customer: <%= sale.user_email %> purchased <%= sale.quantity_purchased %><a href = "/tshirts/<%= sale.tshirt_id %>"> <%= sale.tshirt.color %></a> T- shirts on <%= sale.created_at %>
 						</a>
 					</li>
 				<% end %>
