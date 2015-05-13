@@ -43,3 +43,41 @@ post "/tshirts/:id/newSale" do
 	end 
 end
 
+get "/tshirts/confirmation" do 
+	last_sale = Sale.last(1)
+	this_shirt = TShirt.find(last_sale.id)
+
+	erb :sale_confirm, locals: { sale: last_sale, shirt: this_shirt}
+end
+
+get "/tshirts/new" do
+	erb :new_shirt
+end 
+
+post "/tshirts" do
+	Tshirt.create({style: params[:style], color: params[:color], quantity_available: params[:quantity].to_f, price: params[:price].to_i, description: params[:description], image_url: params[:image]})
+	redirect('/admin')
+end 
+
+get "/tshirts/:id/edit" do 
+	this_shirt = Tshirt.find(params[:id])
+	erb :edit_shirt, lcoals: {tshirt: this_shirt}
+end 
+
+put "/tshirts/:id" do 
+	this_shirt = Tshirt.find(params[:id])
+	style = params[:new_style]
+	color = params[:new_color]
+	quantity = params[:new_quantity].to_f
+	price = params[:new_price].to_i
+	description = params[:new_description]
+	image = params[:new_image]
+	this_shirt.update({style: style, color: color, quantity_available: quantity, price: price, description: description, image_url: image})
+	redirect "/tshirts/#{params[:id]}"
+end
+
+
+
+
+
+
