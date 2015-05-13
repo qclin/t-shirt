@@ -1,6 +1,6 @@
 require 'sinatra'
 require 'pry'
-require_relarive 'models/shirt'
+require_relative 'models/tshirt'
 
 #Landing Page
 get "/" do

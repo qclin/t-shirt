@@ -1,29 +1,30 @@
 <html>
-<head>
-	<title>Tshirt.ly - buy cool T's</title>
-	<link rel="stylesheet" type="text/css" href="styles.css">
-</head>
-<body>
-	<header>
-		<h1> Tshirt.ly <h1>
-			<p> Company Tagline + info <p>
-	<header>
-	<div class="content">
-	    <ul class = "tshirts">
+	<head>
+		<title>Tshirt.ly - Buy Cool T's</title>
+		<link rel="stylesheet" type="text/css" href="styles.css">
+	</head>
+	<body>
+		<header>
+			<h1> Tshirt.ly </h1>
+				<p><h2>Company Tagline + info</h2></p>
+		</header>
+		<div class="content">
+		    <ul class = "tshirts">
 
-			<% tshirts.each do |tshirt| %>
-			<li>
-				<span href = "/tshirts/<%= tshirt.id %>"> 
-					<%= tshirt.img_url %>
-					<br>
-					<%= tshirt.name %>
-			</li>
-			<% end %>
-	    </ul>
-    </div>
+				<% tshirts.each do |tshirt| %>
+					<li>
+						<a href = "/tshirts/<%= tshirt.id %>"> 
+							<image src="<%= tshirt.image_url %>"></image>
+							<br>
+							<%= tshirt.style %>
+						</a>
+					</li>
+				<% end %>
+		    </ul>
+	    </div>
 
-				
-				
+					
+					
 
-</body>
+	</body>
 </html>
