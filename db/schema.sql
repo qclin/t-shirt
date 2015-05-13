@@ -10,7 +10,7 @@ create table if not exists tshirts (
 
 create table if not exists sales (
 	id integer primary key,
-	user text,
+	user_email text,
 	tshirt_id integer,
 	quantity_purchased integer,
 	created_at timestamp default current_timestamp
