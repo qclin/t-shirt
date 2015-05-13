@@ -2,32 +2,40 @@
 <html>
   <head>
     <link rel = "stylesheet" type = "text/css" href = "/css/styles.css">
+    <!-- Link to stylesheet -->
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
+    <!-- Link to GoogleFonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,600italic,700italic,800italic,400,300,600' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,400italic' rel='stylesheet' type='text/css'>
+  </head>
   </head>
   <body>
     <div>
     <header>
-      <h1>Update a T-Shirt</h1>
+          <h1> Tshirt.ly <h1>
+          <h2>Your source for cool T's</h2>
     </header>
-    <div class="lines"></div>
-    <form class = "list" method = "post" action = "/tshirts/<%= tshirt.id %>" >
-      <input type = "hidden" name = "_method" value = "put">
-        <div class = "fields">
-          <label>Change T-Shirt Style</label>
-          <input type = "text" name = "new_style" value = "<%= tshirt.style %>"><br />
-          <label>Change Colours</label>
-          <input type = "text" name = "new_color" value = "<%= tshirt.color %>"><br />
-          <label>Available In Stock</label>
-          <input type = "text" name = "new_quantity" value = "<%= tshirt.quantity_available %>"><br />
-          <label>Inflation Adjustment</label>
-          <input type = "text" name = "new_price" value = "<%= tshirt.price %>"><br />
-          <label>Change Image</label>
-          <input type = "text" name = "new_image" value = "<%= tshirt.image_url %>"><br />
-
-          <button class = "update-button">Update</button></br>
-
+      <h1>Update a T-Shirt</h1>
+        <div class="lines"></div>
           <form class = "list" method = "post" action = "/tshirts/<%= tshirt.id %>" >
-      <input type = "hidden" name = "_method" value = "delete">
-          <button class = "delete-button">Delete</button>
+            <input type = "hidden" name = "_method" value = "put">
+              <div class = "fields">
+                <label>Change T-Shirt Style</label>
+                <input type = "text" name = "new_style" value = "<%= tshirt.style %>"><br />
+                <label>Change Colours</label>
+                <input type = "text" name = "new_color" value = "<%= tshirt.color %>"><br />
+                <label>Available In Stock</label>
+                <input type = "text" name = "new_quantity" value = "<%= tshirt.quantity_available %>"><br />
+                <label>Inflation Adjustment</label>
+                <input type = "text" name = "new_price" value = "<%= tshirt.price %>"><br />
+                <label>Change Image</label>
+                <input type = "text" name = "new_image" value = "<%= tshirt.image_url %>"><br />
+
+                <button class = "update-button">Update</button></br>
+
+            <form class = "list" method = "post" action = "/tshirts/<%= tshirt.id %>" >
+            <input type = "hidden" name = "_method" value = "delete">
+                <button class = "delete-button">Delete</button>
           </form>
         </div>
     </form>
