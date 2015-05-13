@@ -46,15 +46,15 @@ Make sure you switch who is typing frequently and that you both understand the c
 * Build one feature at a time and don't move on to the next one until you are finished with the last.
 * 
 
-ROUTES
-'/'
-'/tshirts'
-'/tshirts/:id'
-'/tshirts/:id/newSale'
-'/tshirts/confirmation'
-'/admin'
-'/admin/tshirts'
-'/admin/tshirts/:id'
+### ROUTES
+- '/'
+- '/tshirts'
+- '/tshirts/:id'
+- '/tshirts/:id/newSale'
+- '/tshirts/confirmation'
+- '/admin'
+- '/admin/tshirts'
+- '/admin/tshirts/:id'
 
 
 
