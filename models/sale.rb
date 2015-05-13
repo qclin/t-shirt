@@ -5,9 +5,4 @@ class Sale < ActiveRecord::Base
 	def tshirt 
 		Tshirt.find_by({id: self.tshirt_id})
 	end 
-
-	def log
-		return "TESTTESTTEST"
-	end
-
 end
