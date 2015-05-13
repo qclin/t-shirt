@@ -7,10 +7,10 @@
 		<h1> Tshirt.ly <h1>
 			<p> Company Tagline + info <p>
 	<header>
-	<div class="content"></div>
+	<div class="content">
 	    <ul class = "tshirts">
 
-			<% tshirts.each do |item| %>
+			<% tshirts.each do |tshirt| %>
 			<li>
 				<span href = "/tshirts/<%= tshirt.id %>"> 
 					<%= tshirt.img_url %>
