@@ -36,7 +36,7 @@ header{
 	height: 100px;
 	top: 0;
 	left: 0;
-	position: fixed;
+	position: absolute;
 	width: 100%;
 
 }
@@ -59,4 +59,19 @@ header{
 }
 body{
 	margin: 0px 0px 0px 0px;
+}
+[class*="col-"] {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #eee;
+  border: 1px solid #ddd;
+  border: 1px solid rgba(86,61,124,.2);
+  display: inline;
+  padding: 10px 10px 10px 10px;
+  margin: 10px
+
+}
+img.resize{
+    width:540px; /* you can use % */
+    height: auto;
 }

@@ -6,20 +6,31 @@
 		<!-- Link to GoogleFonts -->
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,600italic,700italic,800italic,400,300,600' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Lora:400,400italic' rel='stylesheet' type='text/css'>
+<<<<<<< HEAD
 		<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
 		<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 		<script src="http://documentcloud.github.com/underscore/underscore-min.js"></script>
+=======
+		<!-- Link to bootstrap + jquery + underscore -->
+		<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="../css/styles.css">
+<!-- 		// <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		// <script src="http://documentcloud.github.com/underscore/underscore-min.js"></script> -->
+
+>>>>>>> 269c6b7d3f96b1a76e66c68a579e62e5878ca798
 
 	</head>
 	</head>
 	<body>
+<!-- 		// 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		// <script src="http://documentcloud.github.com/underscore/underscore-min.js"></script> -->
 		<header>
 			     <nav class="navHeader">
 					<ul>
-						<li><a href="#">SHOP</a></li>
-						<li><a href="#">ABOUT</a></li>
-						<li><a href="#">ADMIN</a></li>
+						<li><a href="/tshirts">SHOP</a></li>
+						<li><a href="/about">ABOUT</a></li>
+						<li><a href="/admin">ADMIN</a></li>
 					</ul>
 				</nav>	
 			<div class="title">
@@ -28,21 +39,24 @@
 	    	</div>
 		</header>
 		<div class="content">
-		    <ul class="tshirts">
+		    <div class="tshirts">
 
 				<% tshirts.each do |tshirt| %>
-					<li>
+					
+						<div class="col-md-4 dish">
 						<a href = "/tshirts/<%= tshirt.id %>"> 
-							<image src="<%= tshirt.image_url %>"></image>
+							<img style="height:auto; width:auto; max-width:300px; max-height:300px;" src="<%= tshirt.image_url %>"></img>
 							<br>
+							
 							<%= tshirt.style %>
 						</a>
-					</li>
+					</div>
 				<% end %>
-		    </ul>
+		    </div>
 	    </div>
 
-					
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="http://documentcloud.github.com/underscore/underscore-min.js"></script>	
 					
 
 	</body>
