@@ -1,36 +1,19 @@
 <html>
-	<head>
-		<title>Tshirt.ly - Buy Cool T's</title>
-		<!-- Link to stylesheet -->
-		<link rel="stylesheet" type="text/css" href="../css/styles.css">
-		<!-- Link to GoogleFonts -->
-		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,600italic,700italic,800italic,400,300,600' rel='stylesheet' type='text/css'>
-		<link href='http://fonts.googleapis.com/css?family=Lora:400,400italic' rel='stylesheet' type='text/css'>
-
-		<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
-		<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-		<script src="http://documentcloud.github.com/underscore/underscore-min.js"></script>
-
-		<!-- Link to bootstrap + jquery + underscore -->
-		<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="../css/styles.css">
-	</head>
+<%= erb :header %>
 	<body>
 		<header>
 			<h1> Tshirt.ly </h1>
 			<h2>Your source for cool T's</h2>
 		</header>
 		<div class="content">
-			<ul class = "this_tshirt">
-				<li>
+			<!-- <ul class = "this_tshirt"> -->
+				<div class="col-md-6 dish">
 					<span href = "/tshirts/<%= tshirt.id %>"> 
-						<image src="<%= tshirt.image_url %>"></image>
+						<img style="height:auto; width:auto; max-width:500px; max-height:500px;" src="<%= tshirt.image_url %>"></img>
 						<br>
 						<%= tshirt.style %>
 						<br>
-						<ul class="shirt_info">
-							<li>
+						
 								<%= tshirt.description %>
 								<br>
 								$<%= tshirt.price%>
@@ -44,11 +27,11 @@
 								<% else %>
 								Sold out! 
 								<% end %>
-							</l1>
-						</ul>
+						
 					</span>		
-				</li>
-			</ul>
+				
+			</div>
+			<!-- </ul> -->
 		</div>
 	<%= erb :page_footer %>	
 	</body>
