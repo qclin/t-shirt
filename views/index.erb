@@ -1,0 +1,28 @@
+<html>
+<head>
+	<title>Tshirt.ly - buy cool T's</title>
+</head>
+<body>
+	<header>
+		<h1> Tshirt.ly <h1>
+			<p> Company Tagline + info <p>
+	<header>
+	<div class="content"></div>
+	    <ul class = "tshirts">
+
+			<% tshirts.each do |item| %>
+			<li>
+				<span href = "/tshirts/<%= tshirt.id %>"> 
+					<%= tshirt.img_url %>
+					<br>
+					<%= tshirt.name %>
+			</li>
+			<% end %>
+	    </ul>
+    </div>
+
+				
+				
+
+</body>
+</html>
