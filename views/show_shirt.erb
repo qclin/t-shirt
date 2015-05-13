@@ -1,0 +1,37 @@
+<html>
+<head>
+	<title>Tshirt.ly - buy cool T's</title>
+</head>
+<body>
+	<header>
+		<h1> Tshirt.ly <h1>
+			<p> Company Tagline + info <p>
+	<header>
+	<div class="content">
+		<ul class = "this_tshirt">
+			<li>
+				<span href = "/tshirts/<%= tshirt.id %>"> 
+					<%= tshirt.img_url %>
+					<br>
+					<%= tshirt.style %>
+					<br>
+					<ul class="shirt_info">
+						<li>
+							<%= tshirt.description %>
+							<br>
+							<%= tshirt.price %>
+							<br>
+							<% if tshirt.quantity_available > 0 %>
+							In stock!
+							<button>BUY</button>
+							<% else %>
+							Sold out! 
+							<% end %>
+						</l1>
+					</ul>
+				</span>		
+			</li>
+		</ul>
+	</div>	
+</body>
+</html>
