@@ -5,6 +5,7 @@ create table if not exists tshirts (
 	quantity_available integer,
 	price integer,
 	description text,
+	image_url text,
 	created_at timestamp default current_timestamp
 );
 
