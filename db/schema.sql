@@ -3,7 +3,7 @@ create table if not exists tshirts (
 	style text,
 	color text,
 	quantity_available integer,
-	price integer,
+	price number,
 	description text,
 	image_url text,
 	created_at timestamp default current_timestamp
