@@ -56,5 +56,7 @@ Make sure you switch who is typing frequently and that you both understand the c
 - '/admin/tshirts'
 - '/admin/tshirts/:id'
 
+### ERD
+![ERD](https://www.gliffy.com/go/view/8094123.png?size=large "Tshirtly ERD")
 
 
