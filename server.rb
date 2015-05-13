@@ -64,7 +64,8 @@ end
 
 get "/tshirts/:id/edit" do 
 	this_shirt = Tshirt.find(params[:id])
-	erb :edit_shirt, locals: {tshirt: this_shirt}
+
+	erb :edit_shirt, locals: {tshirt: this_shirt, sales: this_shirt.sale.reverse()}
 end 
 
 put "/tshirts/:id" do 

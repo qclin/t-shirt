@@ -13,8 +13,17 @@
     <div>
     <header>
           <h1> Tshirt.ly <h1>
-          <h2>Your source for cool T's</h2>
+          <h2><%= tshirt.style %><%= tshirt.color %></h2>
     </header>
+
+    <div class = "records">
+    sale records for this shirt 
+
+    <% sales.each do |sale| %>
+      <%= sale.user_email %> bought <%= sale.quantity_purchased %> of these on <%= sale.created_at %> 
+    <% end %>
+    </div>
+
       <h1>Update a T-Shirt</h1>
         <div class="lines"></div>
           <form class = "list" method = "post" action = "/tshirts/<%= tshirt.id %>" >
