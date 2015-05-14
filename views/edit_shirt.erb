@@ -7,10 +7,22 @@
 
   <div class = "records">
     Sale records for this shirt: <br>
-    <% sales.each do |sale| %>
-      <%= sale.user_email %> bought <%= sale.quantity_purchased %> of these on <%= sale.created_at %>.<br>
+    <% if sales.length == 0 %>
+    (no sales)
+    <% else %>
+      <% sales.each do |sale| %>
+        <%= sale.user_email %> bought <%= sale.quantity_purchased %> of these on <%= sale.created_at %>.<br>
+      <% end %>
     <% end %>
+    <br>
+    <% if tshirt.hidden %>
+      <br>
+      <h2>This Tshirt Has Been Hidden (deleted)</h2>
+    <% end %>
+
   </div>
+
+
 
   <h3>Update <%= tshirt.style %></h3>
 
