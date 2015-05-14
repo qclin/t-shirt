@@ -5,11 +5,21 @@
 	    <ul class = "sales">
 			<% sales.each do |sale| %>
 				<li>
-					<%= sale.user_email[0..10] %> purchased <%= sale.quantity_purchased %><a href = "/tshirts/<%= sale.tshirt_id %>"> <%= sale.tshirt.color %> <%= sale.tshirt.style %></a> T- shirts on <%= sale.created_at %>
-					</a>
+					<%= sale.user_email[0..10] %> purchased <%= sale.quantity_purchased %>
+					<% tshirts.each do |thisTshirt| %>
+						<% if thisTshirt.id == sale.tshirt_id %>
+							<% if !thisTshirt.hidden %>
+								<a href = "/tshirts/<%= thisTshirt.id %>"> 
+							<% end %>
+						<% end %>
+					<% end %>
+					<%= sale.tshirt.color %> 
+					<%= sale.tshirt.style %></a> T- shirts on <%= sale.created_at %>.
 				</li>
 			<% end %>
 	    </ul>
+	    <br><a href="/tshirts/new"> add new Inventory ! </a>
+
 
 	    <h3>EDIT T-shirt Inventory </h3>
 	    <ul class = "tshirts">

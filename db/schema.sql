@@ -1,4 +1,5 @@
-create table if not exists tshirts (
+drop table if exists tshirts;
+create table tshirts (
 	id integer primary key,
 	style text,
 	color text,
@@ -6,10 +7,12 @@ create table if not exists tshirts (
 	price number,
 	description text,
 	image_url text,
+	hidden boolean,
 	created_at timestamp default current_timestamp
 );
 
-create table if not exists sales (
+drop table if exists sales;
+create table sales (
 	id integer primary key,
 	user_email text,
 	tshirt_id integer,

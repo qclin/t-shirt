@@ -6,7 +6,7 @@
 		<div class = "shirt_info">
 		<h3> <%= tshirt.style %> </h3>
 		<%= tshirt.description %> <br>
-		@ the price of $<%= tshirt.price%><br>
+		@ $<%= tshirt.price%><br>
 		
 		<% if tshirt.quantity_available > 0 %>
 			<form action="/tshirts/<%= tshirt.id %>/newSale" method="GET">
