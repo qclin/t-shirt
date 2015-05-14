@@ -3,6 +3,7 @@
 
 	<div class="admin_content">
 	    <ul class = "sales">
+	    	<h3>Sales History</h3>
 			<% sales.each do |sale| %>
 				<li>
 					<%= sale.user_email[0..10] %> purchased <%= sale.quantity_purchased %>
@@ -18,17 +19,18 @@
 				</li>
 			<% end %>
 	    </ul>
-	    <br><a href="/tshirts/new"> add new Inventory ! </a>
 
-
-	    <h3>EDIT T-shirt Inventory </h3>
-	    <ul class = "tshirts">
-			<% tshirts.each do |tshirt| %>
+	    <ul class = "tshirt">
+			<h3>EDIT T-shirt Inventory </h3>
+	   		<% tshirts.each do |tshirt| %>
 				<li> <a href = "/tshirts/<%= tshirt.id %>/edit"><%= tshirt.style %></a> 
 				<%= tshirt.quantity_available %> remaining.
 				</li>
 			<% end %>
 	    </ul>
+
+	    <br><a href="/tshirts/new"> Add new Inventory! </a>
+
     </div>
 
 <%= erb :page_footer %>

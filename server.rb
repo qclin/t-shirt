@@ -58,7 +58,7 @@ post "/tshirts/:id/newSale" do
 end
 
 post "/tshirts" do
-	Tshirt.create({style: params[:style], color: params[:color], quantity_available: params[:quantity].to_i, price: params[:price].to_f, description: params[:description], image_url: params[:image]})
+	Tshirt.create({style: params[:style], color: params[:color], quantity_available: params[:quantity].to_i, price: params[:price].to_f, description: params[:description], image_url: params[:image], hidden: false})
 	redirect('/admin')
 end 
 
