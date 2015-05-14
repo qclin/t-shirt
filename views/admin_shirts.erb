@@ -1,26 +1,26 @@
 <html>
 	<%= erb :header %>
-		<div class="content">
-		    <ul class = "sales">
-				<% sales.each do |sale| %>
-					<li>
-						Customer: <%= sale.user_email %> purchased <%= sale.quantity_purchased %><a href = "/tshirts/<%= sale.tshirt_id %>"> <%= sale.tshirt.color %> <%= sale.tshirt.style %></a> T- shirts on <%= sale.created_at %>
-						</a>
-					</li>
-				<% end %>
-		    </ul>
-		    EDIT T-shirt information here: 
-		    <ul class = "tshirts">
-				<% tshirts.each do |tshirt| %>
-					<li>
-						<a href = "/tshirts/<%= tshirt.id %>/edit"> 
-							<%= tshirt.style %> </a> inventory: <%= tshirt.quantity_available %> remaining.
-						
-					</li>
-				<% end %>
-		    </ul>
 
-	    </div>
-<footer><%= erb :page_footer %></footer>
+	<div class="admin_content">
+	    <ul class = "sales">
+			<% sales.each do |sale| %>
+				<li>
+					<%= sale.user_email[0..10] %> purchased <%= sale.quantity_purchased %><a href = "/tshirts/<%= sale.tshirt_id %>"> <%= sale.tshirt.color %> <%= sale.tshirt.style %></a> T- shirts on <%= sale.created_at %>
+					</a>
+				</li>
+			<% end %>
+	    </ul>
+
+	    <h3>EDIT T-shirt Inventory </h3>
+	    <ul class = "tshirts">
+			<% tshirts.each do |tshirt| %>
+				<li> <a href = "/tshirts/<%= tshirt.id %>/edit"><%= tshirt.style %></a> 
+				<%= tshirt.quantity_available %> remaining.
+				</li>
+			<% end %>
+	    </ul>
+    </div>
+
+<%= erb :page_footer %>
 	</body>
 </html>

@@ -1,29 +1,21 @@
 <!DOCTYPE>
 <html>
   <%= erb :header %>
-      <h1>Buy Me!</h1>
-    <div class="content">
-      <span href = "/tshirts/<%= tshirt.id %>"> 
-            <image src="<%= tshirt.image_url %>"></image>
-            <br>
-            <%= tshirt.style %>
-            <br>
-            <ul class="shirt_info">
-              <li>
-                <%= tshirt.description %>
-                <br>
-                <%= tshirt.price %>
-                <br>
-              </l1>
-            </ul>
-          </span> 
-    </div>
-<form class="list" method="POST" action="/tshirts/<%= tshirt.id %>/newSale" >
-<input type="text" name="email" placeholder="your email" required><br/>
-<input type="text" name="quantity" placeholder="quantity" required><br/>
-<button class="buy-button">Buy!</button>
-    </form>
-    </div>
-  </body>
-  <footer><%= erb :page_footer %></footer>
+
+<div class="content">
+  <%= tshirt.style %>
+  <%= tshirt.description %>  $<%= tshirt.price %> only <%= tshirt.quantity_available %> left ~! 
+
+  <form class="list" method="POST" action="/tshirts/<%= tshirt.id %>/newSale">
+    <input type="text" name="email" placeholder="your email" required><br/>
+    <input type="text" name="quantity" placeholder="quantity" required><br/>
+    <button class="buy-button">Buy!</button>
+  </form>
+
+</div>
+
+  <%= erb :page_footer %>
+
+</body>
+  
 </html>

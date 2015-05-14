@@ -1,45 +1,52 @@
-
 h1{
-	font-family: 'Open Sans', sans-serif;
-	font-weight: 800;
+	font-weight: bold;
 	font-style: italic;
-	color: white;
-	font-size: 30px;
-	padding-left: 50px;
-
+	font-size: 4em;
+	padding-left: 1em;
+	margin: 0;
+	text-shadow: .06em .06em #ff7373;
+	display: inline;
 }
 h2{
-	font-family: 'Lora', serif;
-	color: white;
-	font-size: 16px;
-	padding-left: 150px;
-	padding-bottom: 20px;
-}
-nav.navHeader ul li{
-	padding: 0px 10px 20px 10px;
+	font-size: 1em;
+	margin-left: 6em;
+	padding-bottom: 2em;
+	font-style: italic;
 	display: inline;
-	text-decoration: none;
-	z-index: 999;
-	font-color: white;
-	float: right;
-
-}
-nav.navHeader ul li a{
-	color: white;
-	padding-bottom: 20px;
-	text-decoration: none;
-	padding-right: 20px;
-	padding-top: 20px;
 }
 header{
-	background-color: #404040;
-	height: 100px;
-	top: 0;
-	left: 0;
-	position: absolute;
-	width: 100%;
 
+	z-index: 999;
+	color: #00aaff;
+	background-image: url("http://healthfitnessrevolution.com/wp-content/uploads/2013/08/lemon-water-hfr.jpg");
+	background-position: 20% 50%;
+	background-width: 100%
+	height: 10em;
+	position: relative;
+	width: 100%;
 }
+ul.navLinks{
+	list-style: none;
+	float: right;
+}
+ul.navLinks li{
+	padding: 2em;
+	display: inline-block;
+}
+ul.navLinks a{
+	color:#08493d;
+	font-stle: bold
+	background-color:white;
+}
+
+a{
+	text-decoration: none;
+}
+admin_content{
+	text-align: left;
+	padding: 2em;
+}
+
 /*div.title{
 	background-color: #404040;
 	height: 150px;
@@ -50,16 +57,26 @@ header{
 	width: 100%;
 
 }*/
+ul{
+	display: inline-block;
+	list-style: none;
+}
+body{
+	font-family: 'Open Sans', sans-serif;
+}
 li.tshirts{
 	display: inline-block;
 	text-decoration: none;
+	padding:1em;
+}
+.content{
+	position:relative;
+	text-align: center
 }
 .container-fluid{
 	padding-top: 200px;
 }
-body{
-	margin: 0px 0px 0px 0px;
-}
+
 [class*="col-"] {
   padding-top: 15px;
   padding-bottom: 15px;
@@ -72,12 +89,38 @@ body{
   
 
 }
-img {
-    width:540px; /* you can use % */
-    height: auto;
+img.show_shirt{
+	height:35em; 
+	width:auto;
+	float:left;
+	padding-top: 2em;
+	padding-left:10em;
 }
+.shirt_info{
+	text-align: right;
+	font-size: 1.5em; 
+	float: right; 
+	margin-top:10%; 
+	padding-right:5em;
+	width: 30%
+}
+.shirt_info button{
+	border-style: none;
+	font-size: 1.5em;
+	color: #00aaff;
+	font-weight: bold;
+	background-color: #FFFFFF;
+	padding: .3em
+}
+
+.shirt_info button:hover{
+	color: #e75f5d;
+}
+
 
 footer{
 	top:95%;
 	width: 100%
+	font-size:2em;
+	color: #00ccff;
 }

@@ -1,22 +1,22 @@
 <html>
-	<%= erb :header %>
 
-		
-				<ul class="tshirts">
-				<% tshirts.each do |tshirt| %>
-					<li class="tshirts">
-						<!-- <div class="col-md-3 dish"> -->
-						<a href = "/tshirts/<%= tshirt.id %>"> 
-							<img style="height:auto; width:250px; max-height:300px;" src="<%= tshirt.image_url %>"></img>
-							<br>
-							
-							<%= tshirt.style %>
-						</a>
-					</li>
-				<% end %>
-				</ul>
-	    
+<%= erb :header %>
+
+<div class="content">
+<ul class="tshirts">
+<% tshirts.each do |tshirt| %>
+	<li class="tshirts">
+		<!-- <div class="col-md-3 dish"> -->
+		<a href = "/tshirts/<%= tshirt.id %>"> 
+			<img style="height:auto; width:250px; max-height:300px;" src="<%= tshirt.image_url %>"></img>
+			<br>
+			<%= tshirt.style %>
+		</a>
+	</li>
+<% end %>
+</ul>
+</div>
 					
-<footer><%= erb :page_footer %></footer>
+<%= erb :page_footer %>
 	</body>
 </html>

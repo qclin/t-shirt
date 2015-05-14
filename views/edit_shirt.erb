@@ -1,43 +1,43 @@
 <!DOCTYPE>
 <html>
-<%= erb :header %>
-          <h3><%= tshirt.style %><%= tshirt.color %></h3>
+    <%= erb :header %>
 
-    <div class = "records">
-    sale records for this shirt 
+    <h3><%= tshirt.style %><%= tshirt.color %></h3>
 
+  <div class = "records">
+    sale records for this shirt: 
     <% sales.each do |sale| %>
       <%= sale.user_email %> bought <%= sale.quantity_purchased %> of these on <%= sale.created_at %> 
     <% end %>
-    </div>
+  </div>
 
-      <h1>Update a T-Shirt</h1>
-        <div class="lines"></div>
-          <form class = "list" method = "post" action = "/tshirts/<%= tshirt.id %>" >
-            <input type = "hidden" name = "_method" value = "put">
-              <div class = "fields">
-                <label>Change T-Shirt Style</label>
-                <input type = "text" name = "new_style" value = "<%= tshirt.style %>"><br />
-                <label>Change Colours</label>
-                <input type = "text" name = "new_color" value = "<%= tshirt.color %>"><br />
-                <label>Available In Stock</label>
-                <input type = "text" name = "new_quantity" value = "<%= tshirt.quantity_available %>"><br />
-                <label>Inflation Adjustment</label>
-                <input type = "text" name = "new_price" value = "<%= tshirt.price %>"><br />
-                <label>Change Image</label>
-                <input type = "text" name = "new_image" value = "<%= tshirt.image_url %>"><br />
+  <h3>Update a T-Shirt</h3>
 
-                <button class = "update-button">Update</button></br>
-          </form>
+  <div class="form"></div>
+    <form class = "list" method = "post" action = "/tshirts/<%= tshirt.id %>" >
+      <input type = "hidden" name = "_method" value = "put">
+          <label>Change T-Shirt Style</label>
+          <input type = "text" name = "new_style" value = "<%= tshirt.style %>"><br />
+          <label>Change Colours</label>
+          <input type = "text" name = "new_color" value = "<%= tshirt.color %>"><br />
+          <label>Available In Stock</label>
+          <input type = "text" name = "new_quantity" value = "<%= tshirt.quantity_available %>"><br />
+          <label>Inflation Adjustment</label>
+          <input type = "text" name = "new_price" value = "<%= tshirt.price %>"><br />
+          <label>Change Image</label>
+          <input type = "text" name = "new_image" value = "<%= tshirt.image_url %>"><br />
+
+          <button class = "update-button">Update</button></br>
+    </form>
 
 
-          <form class = "list" method = "post" action = "/tshirts/<%= tshirt.id %>" >
-            <input type = "hidden" name = "_method" value = "delete">
-                <button class = "delete-button">Delete</button>
-          </form>
-        </div>
+    <form class = "list" method = "post" action = "/tshirts/<%= tshirt.id %>" >
+      <input type = "hidden" name = "_method" value = "delete">
+          <button class = "delete-button">Delete</button>
+    </form>
+  </div>
 
-    </div>
-<footer><%= erb :page_footer %></footer>
+ <%= erb :page_footer %>
+
   </body>
 </html>

@@ -1,33 +1,23 @@
 <html>
 <%= erb :header %>
-		<div class="content">
-			<!-- <ul class = "this_tshirt"> -->
-				<div class="col-md-6 dish">
-					<span href = "/tshirts/<%= tshirt.id %>"> 
-						<img style="height:auto; width:auto; max-width:500px; max-height:500px;" src="<%= tshirt.image_url %>"></img>
-						<br>
-						<%= tshirt.style %>
-						<br>
-						
-								<%= tshirt.description %>
-								<br>
-								$<%= tshirt.price%>
-								<br>
-								<% if tshirt.quantity_available > 0 %>
-								In stock!
-								
-								<form action="/tshirts/<%= tshirt.id %>/newSale" method="GET">
-									<button>BUY</button>
-								</form>
-								<% else %>
-								Sold out! 
-								<% end %>
-						
-					</span>		
-				
-			</div>
-			<!-- </ul> -->
+	<div class="content">
+	
+		<img class ="show_shirt" src="<%= tshirt.image_url %>"></img><br>
+		<div class = "shirt_info">
+		<h3> <%= tshirt.style %> </h3>
+		<%= tshirt.description %> <br>
+		@ the price of $<%= tshirt.price%><br>
+		
+		<% if tshirt.quantity_available > 0 %>
+			<form action="/tshirts/<%= tshirt.id %>/newSale" method="GET">
+				<button>purchase!</button>
+			</form>
+		<% else %>
+			Sold out! 
+		<% end %>
 		</div>
-	<footer><%= erb :page_footer %></footer>
+
+	</div>
+<%= erb :page_footer %>
 	</body>
 </html>
