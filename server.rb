@@ -82,7 +82,8 @@ end
 
 delete "/tshirts/:id" do 
 	this_shirt = Tshirt.find(params[:id])
-	this_shirt.destroy()
+	#this_shirt.destroy()
+	this_shirt.update({hidden:true})
 	redirect "/admin"
 end
 
