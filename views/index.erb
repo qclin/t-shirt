@@ -14,14 +14,14 @@
 		        <h2>Your source for cool T's</h2>
 	    	</div>
 		</header>
-		<div class="content">
+		<div class="container-fluid">
 		    <div class="tshirts">
 
 				<% tshirts.each do |tshirt| %>
 					
 						<div class="col-md-3 dish">
 						<a href = "/tshirts/<%= tshirt.id %>"> 
-							<img style="height:auto; width:auto; max-width:300px; max-height:300px;" src="<%= tshirt.image_url %>"></img>
+							<img style="height:auto; width:250px; max-height:300px;" src="<%= tshirt.image_url %>"></img>
 							<br>
 							
 							<%= tshirt.style %>
