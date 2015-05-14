@@ -43,8 +43,8 @@ post "/tshirts/:id/newSale" do
 	this_shirt = Tshirt.find(tshirt_id)
 	new_quantity = this_shirt.quantity_available - quantity
 	
-	if new_quantity <=  0 
-		response = "Sorry we don't have that many t-shirt for you bugger off"
+	if new_quantity < 0 
+		response = "Sorry we don't have that many t-shirts for you.  Bugger off!<br><br> <a href = '/tshirts'>Continue Shopping</a>"
 	else 
 		Sale.create({user_email: email, tshirt_id: tshirt_id, quantity_purchased: quantity})
 		this_shirt.update({quantity_available: new_quantity})

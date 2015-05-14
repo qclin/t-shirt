@@ -1,5 +1,31 @@
 <html>
 	<%= erb :header %>
+<<<<<<< HEAD
+=======
+		<div class="content">
+		<br><br>
+		    <ul class = "sales">
+		    	<h3>Sales History:</h3>
+				<% sales.each do |sale| %>
+					<li>
+						Customer <%= sale.user_email %> purchased <%= sale.quantity_purchased %><a href = "/tshirts/<%= sale.tshirt_id %>"> <%= sale.tshirt.color %> <%= sale.tshirt.style %></a> T- shirts on <%= sale.created_at %>.
+						</a>
+					</li>
+				<% end %>
+		    </ul>
+		    <br>
+		    
+		    <ul class = "tshirts">
+				<h3>EDIT T-shirt information here:</h3>
+				<% tshirts.each do |tshirt| %>
+					<li>
+						<a href = "/tshirts/<%= tshirt.id %>/edit"> 
+							<%= tshirt.style %> </a> inventory: <%= tshirt.quantity_available %> remaining.
+						
+					</li>
+				<% end %>
+		    </ul>
+>>>>>>> a8200024b3d745963f98029e3c38ff129a6aef0e
 
 	<div class="admin_content">
 	    <ul class = "sales">

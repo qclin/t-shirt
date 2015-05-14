@@ -1,14 +1,23 @@
 <!DOCTYPE>
 <html>
+<<<<<<< HEAD
     <%= erb :header %>
 
     <h3><%= tshirt.style %><%= tshirt.color %></h3>
+=======
+<%= erb :header %>
+          <h3><%= tshirt.style %> (<%= tshirt.color %>)</h3>
+
+    <div class = "records">
+    sale records for this shirt:<br>
+>>>>>>> a8200024b3d745963f98029e3c38ff129a6aef0e
 
   <div class = "records">
     sale records for this shirt: 
     <% sales.each do |sale| %>
-      <%= sale.user_email %> bought <%= sale.quantity_purchased %> of these on <%= sale.created_at %> 
+      <%= sale.user_email %> bought <%= sale.quantity_purchased %> of these on <%= sale.created_at %> <br>
     <% end %>
+<<<<<<< HEAD
   </div>
 
   <h3>Update a T-Shirt</h3>
@@ -39,5 +48,38 @@
 
  <%= erb :page_footer %>
 
+=======
+    </div>
+
+      <h1>Update T-Shirt</h1>
+        <div class="lines"></div>
+          <form class = "list" method = "post" action = "/tshirts/<%= tshirt.id %>" >
+            <input type = "hidden" name = "_method" value = "put">
+              <div class = "fields">
+                <label>Change T-Shirt Style</label>
+                <input type = "text" name = "new_style" value = "<%= tshirt.style %>"><br />
+                <label>Change Colours</label>
+                <input type = "text" name = "new_color" value = "<%= tshirt.color %>"><br />
+                <label>Available In Stock</label>
+                <input type = "text" name = "new_quantity" value = "<%= tshirt.quantity_available %>"><br />
+                <label>Inflation Adjustment</label>
+                <input type = "text" name = "new_price" value = "<%= tshirt.price %>"><br />
+                <label>Change Image</label>
+                <input type = "text" name = "new_image" value = "<%= tshirt.image_url %>"><br />
+
+                <button class = "update-button">Update</button></br>
+          </form>
+
+          <br><br>
+          <form class = "list" method = "post" action = "/tshirts/<%= tshirt.id %>" >
+            <input type = "hidden" name = "_method" value = "delete">
+            <input type = "checkbox" required>
+            <button class = "delete-button">Delete</button>
+          </form>
+        </div>
+
+    </div>
+<footer><%= erb :page_footer %></footer>
+>>>>>>> a8200024b3d745963f98029e3c38ff129a6aef0e
   </body>
 </html>
