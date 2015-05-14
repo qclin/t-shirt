@@ -1,35 +1,21 @@
 <html>
 	<%= erb :header %>
-	<body>
-		<header>
-			     <nav class="navHeader">
-					<ul>
-						<li><a href="/tshirts">SHOP</a></li>
-						<li><a href="/about">ABOUT</a></li>
-						<li><a href="/admin">ADMIN</a></li>
-					</ul>
-				</nav>	
-			<div class="title">
-				<h1> Tshirt.ly <h1>
-		        <h2>Your source for cool T's</h2>
-	    	</div>
-		</header>
-		<div class="container-fluid">
-		    <div class="tshirts">
 
+		
+				<ul class="tshirts">
 				<% tshirts.each do |tshirt| %>
-					
-						<div class="col-md-3 dish">
+					<li class="tshirts">
+						<!-- <div class="col-md-3 dish"> -->
 						<a href = "/tshirts/<%= tshirt.id %>"> 
 							<img style="height:auto; width:250px; max-height:300px;" src="<%= tshirt.image_url %>"></img>
 							<br>
 							
 							<%= tshirt.style %>
 						</a>
-					</div>
+					</li>
 				<% end %>
-		    </div>
-	    </div>
+				</ul>
+	    
 					
 <footer><%= erb :page_footer %></footer>
 	</body>

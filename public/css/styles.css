@@ -50,10 +50,10 @@ header{
 	width: 100%;
 
 }*/
-/*ul{
-	display: inline;
+li.tshirts{
+	display: inline-block;
 	text-decoration: none;
-}*/
+}
 .container-fluid{
 	padding-top: 200px;
 }
