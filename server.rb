@@ -21,6 +21,12 @@ get "/tshirts/confirmation" do
 	erb :sale_confirm, locals: {sale: last_sale[0], tshirt: this_shirt}
 end
 
+#show new sales form 
+get "/tshirts/:id/newSale" do
+	one_shirt = Tshirt.find(params[:id])
+	erb :new_sale, locals: {tshirt: one_shirt}
+end 
+
 #Display individual page
 get "/tshirts/:id" do
 	one_shirt = Tshirt.find(params[:id])
@@ -28,11 +34,6 @@ get "/tshirts/:id" do
 end
 
 
-#show new sales form 
-get "/tshirts/:id/newSale" do
-	one_shirt = Tshirt.find(params[:id])
-	erb :new_sale, locals: {tshirt: one_shirt}
-end 
 
 #posting to sales table 
 post "/tshirts/:id/newSale" do

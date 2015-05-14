@@ -20,14 +20,37 @@ header{
 	color: #00aaff;
 	background-image: url("http://healthfitnessrevolution.com/wp-content/uploads/2013/08/lemon-water-hfr.jpg");
 	background-position: 20% 50%;
-	background-width: 100%
-	height: 10em;
+	background-width: 100%;
+	height: 8em;
 	position: relative;
 	width: 100%;
+	margin: 0;
+	border-bottom: inset;
+	border-bottom-color: #E5E5E5;
+	border-top: ridge;
+	border-top-color: #E5E5E5;
+}
+.header{
+	z-index: 999;
+	color: #00aaff;
+	background-image: url("http://healthfitnessrevolution.com/wp-content/uploads/2013/08/lemon-water-hfr.jpg");
+	background-position: 20% 50%;
+	background-width: 100%;
+	height: 8em;
+	position: relative;
+	width: 100%;
+	margin: 0;
+	border-bottom: inset;
+	border-bottom-color: #E5E5E5;
+	border-top: ridge;
+	border-top-color: #E5E5E5;
+
 }
 ul.navLinks{
 	list-style: none;
 	float: right;
+	padding-right: 30px;
+	font-size: 20px;
 }
 ul.navLinks li{
 	padding: 2em;
@@ -63,6 +86,7 @@ ul{
 }
 body{
 	font-family: 'Open Sans', sans-serif;
+	margin: 0;
 }
 li.tshirts{
 	display: inline-block;
@@ -71,7 +95,8 @@ li.tshirts{
 }
 .content{
 	position:relative;
-	text-align: center
+	text-align: center;
+	padding-top: 4em;
 }
 .container-fluid{
 	padding-top: 200px;
@@ -116,11 +141,19 @@ img.show_shirt{
 .shirt_info button:hover{
 	color: #e75f5d;
 }
+div.about{
+	padding:100px 100px 30px 100px;
+
+}
 
 
 footer{
-	top:95%;
-	width: 100%
-	font-size:2em;
+	/*top:95%;*/
+	width: 100%;
 	color: #00ccff;
+	position: fixed;
+	bottom: 1em;
+	width: 100%;
+	height: 60px;
+
 }
