@@ -10,7 +10,9 @@
 							<img style="height:auto; width:250px; max-height:300px;" src="<%= tshirt.image_url %>"></img>
 							<br>
 							
-							<%= tshirt.style %>
+							<div style="text-align: center;">
+							<%= tshirt.style %><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><%= tshirt.quantity_available %> left
+							</div>
 						</a>
 					</li>
 				<% end %>
