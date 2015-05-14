@@ -47,7 +47,7 @@ Tshirt.create({
 	quantity_available: 21,
 	price: 129.99,
 	description: "Cover your boozm under luscious silks printed in manner of Audubon sanctuary. Audubon Society will receive a $1 donation from every purchase of this t-shirt, production of which probably killed more birds than a dollar could buy...",
-	image_url: "http://images.asos-media.com/inv/media/7/0/2/2/5232207/image3xxl.jpg"
+	image_url: "https://photon-101medialablimit.netdna-ssl.com/s3.store.hypebeast.com/media/image/2013/11/Opening_Cremony_Tee_1_1.jpg?fit=1400%2C1820"
 	})
 
 Tshirt.create({
@@ -81,11 +81,11 @@ Tshirt.create({
 
 Tshirt.create({
 	style: "classic crew neck",
-	color: "heather grey",
+	color: "furry beast",
 	quantity_available: 14,
 	price: 24.99,
 	description: "This classic style is composed of 50% modal/45% cotton/5% lycra. Stone-washed and shrink tested just for you. Limited quantity available. Each of our garments are created in small dye lots, so minor differences may occur.",
-	image_url: "http://i.americanapparel.net/storefront/photos/morephotos/tr401tlw/tr401tlw_01t.jpg"
+	image_url: "http://www.teeruption.com/images/10-3622.jpg"
 	})
 
 Tshirt.create({
