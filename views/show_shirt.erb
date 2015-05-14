@@ -16,8 +16,12 @@
 								<% if tshirt.quantity_available > 0 %>
 								In stock!  Only <%= tshirt.quantity_available %> left!  Better buy a bunch!
 								
+								<br><br>
 								<form action="/tshirts/<%= tshirt.id %>/newSale" method="GET">
 									<button>BUY</button>
+								</form>
+								<form action="/tshirts" method="GET">
+									<button>Don't Buy Now</button>
 								</form>
 								<% else %>
 								Sold out! 
