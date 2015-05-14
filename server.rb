@@ -14,6 +14,10 @@ get "/tshirts" do
 	erb :index, locals: {tshirts: tshirts}			##ADD HERE
 end
 
+get "/tshirts/new" do
+	erb :new_shirt
+end 
+
 get "/tshirts/confirmation" do 
 	last_sale = Sale.last(1)
 	this_shirt = Tshirt.find(last_sale[0].tshirt_id)
@@ -51,11 +55,6 @@ post "/tshirts/:id/newSale" do
 		redirect('/tshirts/confirmation')
 	end 
 end
-
-
-get "/tshirts/new" do
-	erb :new_shirt
-end 
 
 post "/tshirts" do
 	Tshirt.create({style: params[:style], color: params[:color], quantity_available: params[:quantity].to_i, price: params[:price].to_f, description: params[:description], image_url: params[:image]})
