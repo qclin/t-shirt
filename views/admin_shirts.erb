@@ -1,16 +1,20 @@
 <html>
 	<%= erb :header %>
 		<div class="content">
+		<br><br>
 		    <ul class = "sales">
+		    	<h3>Sales History:</h3>
 				<% sales.each do |sale| %>
 					<li>
-						Customer: <%= sale.user_email %> purchased <%= sale.quantity_purchased %><a href = "/tshirts/<%= sale.tshirt_id %>"> <%= sale.tshirt.color %> <%= sale.tshirt.style %></a> T- shirts on <%= sale.created_at %>
+						Customer <%= sale.user_email %> purchased <%= sale.quantity_purchased %><a href = "/tshirts/<%= sale.tshirt_id %>"> <%= sale.tshirt.color %> <%= sale.tshirt.style %></a> T- shirts on <%= sale.created_at %>.
 						</a>
 					</li>
 				<% end %>
 		    </ul>
-		    EDIT T-shirt information here: 
+		    <br>
+		    
 		    <ul class = "tshirts">
+				<h3>EDIT T-shirt information here:</h3>
 				<% tshirts.each do |tshirt| %>
 					<li>
 						<a href = "/tshirts/<%= tshirt.id %>/edit"> 
